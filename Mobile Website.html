@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Mobile website.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo"> 
+                <!-- <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\logo.png " alt=" logo"> -->
+                <img src="./RealPhone_WebPage_Images/images/logo.png" alt="">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Carts</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="information">
+            <div class="OverLay"></div>
+            <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\mobile.png" class="mobile" alt="">
+            <img src="" alt="">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\camera.png" alt="">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP Wide Angle lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\processor.png" alt="">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\display.png" alt="">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\battery.png" alt="">
+                    <div>
+                        <h1>battery Life</h1>
+                        <p>5000mAh, 720 Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\arrow.png" id="UpBtn" alt="">
+            <h3>Features</h3>
+            <img src="C:\Users\LG\Desktop\sandy\VS\JS\JS\Project\Mobile website\RealPhone_WebPage_Images\images\arrow.png" id="DownBtn" alt="">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var UpBtn = document.getElementById("UpBtn");
+        var DownBtn = document.getElementById("DownBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        UpBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+
+        DownBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(+90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+
+    </script>
+
+</body>
+</html>
